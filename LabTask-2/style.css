@@ -1,0 +1,24 @@
+.body
+{
+    background-color: beige;
+    margin: auto;
+}
+.pic{
+    margin: 25px 50px 5px 100px;
+    height:300px;
+    border-radius: 80px;
+    
+}
+.table{
+    border: dashed;
+}
+.color{
+    color: blue;
+}
+.table{
+   padding-left: 30px;
+   padding-right: 30px;
+   padding-bottom: 50px;
+   padding-top: 50px;
+    
+}
