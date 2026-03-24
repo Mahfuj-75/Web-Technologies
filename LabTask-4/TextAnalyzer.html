@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Analyzer</title>
+</head>
+<style>
+    h2
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: darkblue;
+    }
+    button
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(77, 5, 245);
+        font-weight: bolder;
+        font-size: large;
+        color: aliceblue;
+    }
+</style>
+<body>
+    <center>
+
+    <h2>Text Analyzer</h2>
+
+    <textarea id="textInput" rows="10" cols="60"></textarea>
+    
+    <br><br>
+
+    <button onclick="analyzeText()">Analyze Text</button>
+
+   <div id="result" style="border:2px solid black; padding: 60px; margin-top: 25px; background-color: #f7f4f4;">
+   </div>
+</center>
+
+    <script>
+
+        function analyzeText() 
+        {
+           var text = document.getElementById("textInput").value;
+
+            if (text.trim()==="") 
+            {
+                document.getElementById("result").innerHTML="Please Enter text";
+                return;
+            }
+
+            var charCount = text.length;
+            var words = text.trim().split(" ")
+            var wordCount = words.length;
+            var reversed = text.split("").reverse().join("");
+
+            document.getElementById("result").innerHTML =
+                "<p><b>Characters:</b> "+charCount+"</p>"+
+                "<p><b>Words:</b> "+wordCount+"</p>"+
+                "<p><b>Reversed Text:</b> "+reversed+"</p>";
+        }
+    </script>
+
+</body>
+</html>
