@@ -6,7 +6,7 @@ $email=$_POST['email'];
 $regis=$_POST['registrationNo'];
 $dept=$_POST['department'];
 
-$sql="INSERT INTO registration (name,email, registration, department)
+$sql="INSERT INTO students (name,email, registration_no, department)
 VALUES ('$name','$email','$regis','$dept')";
 
 if(mysqli_query($conn, $sql))
