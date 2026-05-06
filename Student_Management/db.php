@@ -1,12 +1,10 @@
 <?php
 
-include "config.php";
+$conn=mysqli_connect("localhost","root","","student_management");
 
-$success=$error="";
-
-if($_SERVER["REQUEST_METHOD"]=="POST")
+if(!$conn)
     {
-        
+        die("Connection Failed: " . mysqli_connect_error());
     }
 
 ?>
